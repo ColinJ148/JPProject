@@ -1,7 +1,7 @@
 import java.util.Date;
 
 abstract class Product implements Item {
-
+  //test comment
   private int serialNumber;
   private String manufacturer;
   private Date manufacuredOn;
