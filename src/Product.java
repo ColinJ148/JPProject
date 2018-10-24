@@ -1,12 +1,12 @@
 import java.util.Date;
 
 abstract class Product implements Item {
-  //test comment
+
   private int serialNumber;
   private String manufacturer;
   private Date manufacuredOn;
   private String name;
-  private static int currentProductionNumber;
+  private static int currentProductionNumber = 1;
 
   //constructor sets name and sets manufacuredOn
   //as well as currentProductionNumber
@@ -26,8 +26,7 @@ abstract class Product implements Item {
     String output = "Manufacturer:" + manufacturer + "\n";
     output = output + "Serial number:" + serialNumber + "\n";
     output = output + "Date:" + manufacuredOn + "\n";
-    output = output + "name:" + name;
-
+    output = output + "Name:" + name + "\n";
     return output;
   }
 
