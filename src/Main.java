@@ -27,7 +27,7 @@ public class Main {
 //
 //    Screen s1 = new Screen();
 //    System.out.println(s1.toString());
-
+//
     MoviePlayer moviePlayer = new MoviePlayer("moviewatcher");
     System.out.println(moviePlayer.toString());
     moviePlayer.play();
