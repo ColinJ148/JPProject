@@ -28,24 +28,31 @@ public class Main {
 //    Screen s1 = new Screen();
 //    System.out.println(s1.toString());
 //
-    MoviePlayer moviePlayer = new MoviePlayer("moviewatcher");
-    System.out.println(moviePlayer.toString());
-    moviePlayer.play();
+//    MoviePlayer moviePlayer = new MoviePlayer("moviewatcher");
+//    System.out.println(moviePlayer.toString());
+//    moviePlayer.play();
+//
+//    MultimediaControlTestClass tester = new MultimediaControlTestClass();
+//    tester.play();
+//    tester.stop();
+//  }
 
-    MultimediaControlTestClass tester = new MultimediaControlTestClass();
-    tester.play();
-    tester.stop();
+    Product p1 = new Product("azza");
+    Product p2 = new Product("sfds");
+    Product p3 = new Product("afef");
+    Product p4 = new Product("cccx");
+
+
   }
-
 }
 
 /**
  * Driver class to test the abstract class Product *Contructor that takes a String called variable and than calls its
  * super and passes it name.
  */
-class Widget extends Product {
-
-  public Widget(String name) {
-    super(name);
-  }
-}
+//class Widget extends Product {
+//
+//  public Widget(String name) {
+//    super(name);
+//  }
+//}
