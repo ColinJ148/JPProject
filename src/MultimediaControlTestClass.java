@@ -1,3 +1,5 @@
+//Test class to show MultimediaControl interface can be used for
+//  all types of media
 public class MultimediaControlTestClass implements MultimediaControl {
 
   @Override

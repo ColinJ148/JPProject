@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 
-class Product implements Item {
+class Product implements Item, Comparable<Product> {
 
   private int serialNumber;
   private String manufacturer;
@@ -14,7 +14,6 @@ class Product implements Item {
 
   //constructor sets name and sets manufacuredOn
   //as well as currentProductionNumber
-  ArrayList<String> names = new ArrayList<String>();
 
   public Product(String name) {
 
@@ -23,7 +22,7 @@ class Product implements Item {
     this.manufacuredOn = new Date();
     manufacturer = Item.manufacturer;
     currentProductionNumber++;
-    names.add(name);
+
   }
 
   //Overrides toString method to format the output of the fields within the class.
@@ -33,15 +32,8 @@ class Product implements Item {
     output = output + "Serial number:" + serialNumber + "\n";
     output = output + "Date:" + manufacuredOn + "\n";
     output = output + "Name:" + name + "\n";
-    getSortednames();
-    return output;
-  }
 
-  public void getSortednames(){
-    Collections.sort(names);
-    for(String counter: names){
-      System.out.println(counter);
-    }
+    return output;
   }
 
 
@@ -67,6 +59,11 @@ class Product implements Item {
   @Override
   public int getSerialNumber() {
     return serialNumber;
+  }
+
+  @Override
+  public int compareTo(Product o) {
+    return this.name.compareTo(o.getName());
   }
 }
 

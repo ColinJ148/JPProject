@@ -8,14 +8,18 @@ public class Screen implements ScreenSpec {
     resolution = "1920x1080";
     refreshrate = 2;
     responsetime = 41;
-
   }
 
+  public Screen(String resolution, int refreshrate, int responsetime){
+    this.resolution = resolution;
+    this.refreshrate = refreshrate;
+    this.responsetime = responsetime;
+  }
   public String toString(){
     String output;
     output = "Screen resolution: " + resolution + "\n";
     output += "Screen refresh rate: " + refreshrate + "\n";
-    output += "Screen respone time: " + responsetime + "\n";
+    output += "Screen response time: " + responsetime + "\n";
     return output;
   }
   @Override

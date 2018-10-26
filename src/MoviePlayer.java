@@ -1,13 +1,16 @@
 public class MoviePlayer extends Product implements MultimediaControl {
-  private Screen monitor = new Screen();
-  private MonitorType type = MonitorType.LCD;
 
-  public MoviePlayer(String name) {
+  private Screen monitor;
+  private MonitorType type;
+
+  public MoviePlayer(String name, Screen screen, MonitorType type) {
     super(name);
+    this.monitor = screen;
+    this.type = type;
   }
 
 
-  public String toString(){
+  public String toString() {
     String output = super.toString();
     output += "Screen: " + monitor + "\n";
     output += "MonitorType: " + type + "\n";
