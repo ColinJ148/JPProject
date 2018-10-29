@@ -9,7 +9,9 @@ class Product implements Item, Comparable<Product> {
   private String name;
   private static int currentProductionNumber = 1;
 
+
   //constructor sets name, manufacured, and currentProductionNumber
+
 
   public Product(String name) {
 
@@ -25,6 +27,8 @@ class Product implements Item, Comparable<Product> {
    * Overrides toString method to format the output of the fields within the class.
    */
 
+
+  //Overrides toString method to format the output of the fields within the class.
   @Override
   public String toString() {
     String output = "Manufacturer : " + manufacturer + "\n";

@@ -20,13 +20,13 @@ public class Main {
     ArrayList<Product> products = new ArrayList<>();
     products = testCollection();
     Collections.sort(products);         //sorts products by name using collections sort
-    System.out.println(products);       //prints all information about products
+    print(products);
   }
 
   /**
    * Driver to check that different products can be created
    * as objects after objects
-   * are created they are added to aarraylist named products.
+   * are created they are added to arraylist named products.
    */
   public static ArrayList<Product> testCollection() {
 
@@ -47,5 +47,19 @@ public class Main {
     return products;
   }
 
+  /**
+   * loop though arrayList and print out element
+   * @param products
+   */
+  public static void print(ArrayList<Product> products){
+    for (Product object: products) {
+      System.out.println(object);
+    }
+    }
 
-}
+  }
+
+
+
+
+
