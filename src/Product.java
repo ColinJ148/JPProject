@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+
 import java.util.Date;
 
 class Product implements Item, Comparable<Product> {
@@ -12,8 +9,7 @@ class Product implements Item, Comparable<Product> {
   private String name;
   private static int currentProductionNumber = 1;
 
-  //constructor sets name and sets manufacuredOn
-  //as well as currentProductionNumber
+  //constructor sets name, manufacured, and currentProductionNumber
 
   public Product(String name) {
 
@@ -25,22 +21,25 @@ class Product implements Item, Comparable<Product> {
 
   }
 
-  //Overrides toString method to format the output of the fields within the class.
+  /**
+   * Overrides toString method to format the output of the fields within the class.
+   */
+
   @Override
   public String toString() {
-    String output = "Manufacturer:" + manufacturer + "\n";
-    output = output + "Serial number:" + serialNumber + "\n";
-    output = output + "Date:" + manufacuredOn + "\n";
-    output = output + "Name:" + name + "\n";
-
+    String output = "Manufacturer : " + manufacturer + "\n";
+    output = output + "Serial number : " + serialNumber + "\n";
+    output = output + "Date : " + manufacuredOn + "\n";
+    output = output + "Name : " + name + "\n";
     return output;
   }
 
-
+  //allows productionnumber to be changed on certain object
   public void setProductionNumber(int productionNumber) {
     serialNumber = currentProductionNumber++;
   }
 
+  //allows name to be changed on certain object
   @Override
   public void setName(String name) {
     this.name = name;
@@ -61,6 +60,7 @@ class Product implements Item, Comparable<Product> {
     return serialNumber;
   }
 
+  //Used to specify that names are being sorted when Collections.sort is used
   @Override
   public int compareTo(Product o) {
     return this.name.compareTo(o.getName());
