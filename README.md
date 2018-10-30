@@ -1,5 +1,5 @@
 # JPProject
-JPProject Alpha is the beginning of a template created in Java for creating and recording all future production line items. The goal is to create a flexivle structure that would then be easily modifiable to handle different products.
+JPProject Alpha is the beginning of a template created in Java for creating and recording all future production line items. The goal is to create a flexivle structure that would then be easily modifiable to handle different products. Products are currently stored within a ArrayList and all the information about the product is then printed.
 
 
 <h2>
