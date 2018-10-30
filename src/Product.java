@@ -1,4 +1,3 @@
-
 import java.util.Date;
 
 class Product implements Item, Comparable<Product> {
