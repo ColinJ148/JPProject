@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Date;
 
 class Product implements Item, Comparable<Product> {
@@ -21,7 +22,12 @@ class Product implements Item, Comparable<Product> {
     currentProductionNumber++;
 
   }
+  static Product printType(Product product){
+    //need to figure this out
 
+
+    return null;
+  }
   /**
    * Overrides toString method to format the output of the fields within the class.
    */

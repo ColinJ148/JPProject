@@ -17,6 +17,9 @@ public class Main {
     products = testCollection();
     Collections.sort(products);         //sorts products by name using collections sort
     print(products);
+    EmployeeInfo e1 = new EmployeeInfo();
+    System.out.println(e1.getCode());
+
   }
 
   /**
@@ -40,6 +43,8 @@ public class Main {
     products.add(m2);
 
     return products;
+
+
   }
 
   /**
