@@ -9,29 +9,22 @@ class Product implements Item, Comparable<Product> {
   private String name;
   private static int currentProductionNumber = 1;
 
-
   //constructor sets name, manufacured, and currentProductionNumber
 
-
   public Product(String name) {
-
     this.name = name;
     this.serialNumber = currentProductionNumber;
     this.manufacuredOn = new Date();
     manufacturer = Item.manufacturer;
     currentProductionNumber++;
-
   }
   static Product printType(Product product){
     //need to figure this out
-
-
     return null;
   }
   /**
    * Overrides toString method to format the output of the fields within the class.
    */
-
 
   //Overrides toString method to format the output of the fields within the class.
   @Override

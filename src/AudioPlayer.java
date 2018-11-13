@@ -6,7 +6,6 @@
  */
 public class AudioPlayer extends Product implements MultimediaControl {
 
-
   private String audioSpecification;
   private ItemType mediaType = ItemType.AU;
 
@@ -56,6 +55,4 @@ public class AudioPlayer extends Product implements MultimediaControl {
     System.out.println("next");
 
   }
-
-
 }
