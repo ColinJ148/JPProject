@@ -18,6 +18,8 @@ public class EmployeeInfo {
     } else {
       System.out.println("name not valid.");
     }
+    getId();
+    reverseString(deptId);
     in.close();
 
   }
@@ -69,6 +71,7 @@ public class EmployeeInfo {
   }
 
   public String getDeptId() {
+    System.out.println("Please Enter Department ID:");
     deptId = in.nextLine();
     return deptId;
   }
@@ -91,5 +94,19 @@ public class EmployeeInfo {
       return true;
     }
     return false;
+  }
+  public String reverseString(String id){
+    String reversed = "";
+    for(int i = id.length() - 1; i >= 0; i--)
+    {
+      reversed = reversed + id.charAt(i);
+    }
+    deptId = reversed;
+    return deptId;
+  }
+
+  public static void main(String[] args) {
+    EmployeeInfo emp1 = new EmployeeInfo();
+    System.out.println(emp1.toString());
   }
 }
