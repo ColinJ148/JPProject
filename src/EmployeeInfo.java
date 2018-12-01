@@ -10,14 +10,24 @@ public class EmployeeInfo {
   private Scanner in = new Scanner(System.in);
 
   public EmployeeInfo() {
+    p = Pattern.compile("[A-Z][a-z]{3}[0-9]{2}");
     setName();
+    setDeptId();
     if (checkName(name)) {
       createEmployeeCode(name);
     } else {
       System.out.println("name not valid.");
     }
-    setDeptId();
+    in.close();
 
+  }
+
+  @Override
+  public String toString() {
+    String output;
+    output = name.toString() + "\n";
+    output += code + "\n" + deptId;
+    return output;
   }
 
   public StringBuilder getName() {
@@ -35,14 +45,13 @@ public class EmployeeInfo {
   private void createEmployeeCode(StringBuilder name) {
     int whitespace;
     code = name.substring(0, 1);
-    whitespace = name.indexOf(" ");                    //find index of whitespace
+    whitespace = name.indexOf(" ");                     //find index of whitespace
     code += name.substring(whitespace, name.length());  //Lastname part of employee code
-    code = code.replace(" ", "");      //remove whitespace
+    code = code.replace(" ", "");                       //remove whitespace
   }
 
   private String inputName() {
     String userInput;
-
     System.out.println("Enter Employee Name");
     userInput = in.nextLine();
     name.append(userInput);
@@ -56,9 +65,7 @@ public class EmployeeInfo {
         check = true;
       }
     }
-
     return check;
-
   }
 
   public String getDeptId() {
@@ -68,26 +75,21 @@ public class EmployeeInfo {
 
   private void setDeptId() {
     getDeptId();
+  }
+
+  private String getId() {
     if (validId(deptId)) {
       this.deptId = deptId;
     } else {
       this.deptId = "None01";
     }
-  }
-
-  private String getId() {
-    return "1";
+    return deptId;
   }
 
   private boolean validId(String id) {
-    boolean valid = false;    //set error
-    for (char c : deptId.toString().toCharArray()) {
-      if (Character.isUpperCase(c)) {
-        valid = true;
-      }
+    if (Pattern.matches("[A-Z][a-z]{3}[0-9]{2}", id)) {
       return true;
-
     }
-    return true;
+    return false;
   }
 }
