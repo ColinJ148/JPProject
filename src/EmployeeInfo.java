@@ -7,12 +7,13 @@ public class EmployeeInfo {
   private String code;
   private String deptId;
   private Pattern p;
-  private Scanner in = new Scanner(System.in);
+  private Scanner in;
 
   public EmployeeInfo() {
-    p = Pattern.compile("[A-Z][a-z]{3}[0-9]{2}");
+    in = new Scanner(System.in);
     setName();
     setDeptId();
+
     if (checkName(name)) {
       createEmployeeCode(name);
     } else {
@@ -20,15 +21,14 @@ public class EmployeeInfo {
     }
     getId();
     reverseString(deptId);
-    in.close();
+
 
   }
 
   @Override
   public String toString() {
-    String output;
-    output = name.toString() + "\n";
-    output += code + "\n" + deptId;
+    String output  = "";
+    output += "Employee Code : " + code + "\n" + " Department Number : " +  deptId;
     return output;
   }
 
@@ -54,7 +54,7 @@ public class EmployeeInfo {
 
   private String inputName() {
     String userInput;
-    System.out.println("Enter Employee Name");
+    System.out.println("Please enter your first and last name:");
     userInput = in.nextLine();
     name.append(userInput);
     return userInput;
@@ -71,7 +71,7 @@ public class EmployeeInfo {
   }
 
   public String getDeptId() {
-    System.out.println("Please Enter Department ID:");
+    System.out.println("Please enter the department ID:");
     deptId = in.nextLine();
     return deptId;
   }
@@ -81,9 +81,7 @@ public class EmployeeInfo {
   }
 
   private String getId() {
-    if (validId(deptId)) {
-      this.deptId = deptId;
-    } else {
+    if (!validId(deptId)) {
       this.deptId = "None01";
     }
     return deptId;
@@ -95,18 +93,18 @@ public class EmployeeInfo {
     }
     return false;
   }
-  public String reverseString(String id){
-    String reversed = "";
-    for(int i = id.length() - 1; i >= 0; i--)
-    {
-      reversed = reversed + id.charAt(i);
+
+  public String reverseString(String id) {
+    if (deptId.equals("None01")) {
+      return deptId;
+    } else {
+      String reversed = "";
+      for (int i = id.length() - 1; i >= 0; i--) {
+        reversed = reversed + id.charAt(i);
+      }
+      deptId = reversed;
+      return deptId;
     }
-    deptId = reversed;
-    return deptId;
   }
 
-  public static void main(String[] args) {
-    EmployeeInfo emp1 = new EmployeeInfo();
-    System.out.println(emp1.toString());
-  }
 }
