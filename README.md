@@ -1,5 +1,8 @@
 # JPProject
-JPProject Alpha is the beginning of a template created in Java for creating and recording all future production line items. The goal is to create a flexivle structure that would then be easily modifiable to handle different products. Products are currently stored within a ArrayList and all the information about the product is then printed.
+JPProject Release Candidate is a program that allows users to track both employees and products to
+their multimedia company. Every product as well as employee information are saved within a txt file
+which is than able to be read from the program itself. The program will allow users to add new 
+products and employees.
 
 
 <h2>
@@ -21,8 +24,7 @@ Java 9<br>
 <h2>
 Authors
 </h2>
-Coded by Colin Joyce<br>
-Designed by Oracle Academy
+Colin Joyce
 
 
 

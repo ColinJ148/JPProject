@@ -1,25 +1,22 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 /**
- * * Main method of JPProject that is mainly used for testing purposes at the moment. JPProject
- * Alpha is the beginning of a template created in Java for creating and recording all future
- * production line items. The goal is to create a flexible structure that would then be easily
- * modifiable to handle different products. By: Colin Joyce
+ * The main method of the JP release program is used just to create a UserInteraction
+ * object which is what the users ultimately interact with. The rest of the main class
+ * is used for testing purposes
  */
-
 
 public class Main {
 
   public static void main(String[] args) {
-    ArrayList<Product> products = new ArrayList<>();
+    UserInteraction userInteraction = new UserInteraction();     //Start the part of the program the user can
+    ArrayList<Product> products = new ArrayList<>();//interact with
     products = testCollection();
-    Collections.sort(products);         //sorts products by name using collections sort
+    Collections.sort(products);                   //sorts products by name using collections sort
     print(products);
     EmployeeInfo e1 = new EmployeeInfo();
     System.out.println(e1.getCode());
-
   }
 
   /**
@@ -36,26 +33,19 @@ public class Main {
         new Screen("1366x768", 40, 22), MonitorType.LED);
 
     ArrayList<Product> products = new ArrayList<>();
-
     products.add(a1);
     products.add(a2);
     products.add(m1);
     products.add(m2);
-
     return products;
-
-
-  }
-
-  /**
-   * loop though arrayList and print out element
+  }/**
+   * loop though arrayList and print out element.
    */
   public static <T> void print(ArrayList<T> products) {
     for (T object : products) {
       System.out.println(object);
     }
   }
-
 }
 
 

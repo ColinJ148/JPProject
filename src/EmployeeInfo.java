@@ -6,9 +6,13 @@ public class EmployeeInfo {
   private StringBuilder name = new StringBuilder();
   private String code;
   private String deptId;
-  private Pattern p;
   private Scanner in;
 
+  /**
+   * Constructor EmployeeInfo gets name and department Id from the user and calls
+   * other methods to check if that are valid and then calls a method to reverse the
+   * department iD.
+   */
   public EmployeeInfo() {
     in = new Scanner(System.in);
     setName();
@@ -70,6 +74,10 @@ public class EmployeeInfo {
     return check;
   }
 
+  /**
+   * Gets user to enter the department ID
+   * @return deptId
+   */
   public String getDeptId() {
     System.out.println("Please enter the department ID:");
     deptId = in.nextLine();
@@ -87,6 +95,11 @@ public class EmployeeInfo {
     return deptId;
   }
 
+  /**
+   * checks if id entered by user is valid using regex
+   * @param id being checked if valid.
+   * @return  true or false base on if id is valid or not.
+   */
   private boolean validId(String id) {
     if (Pattern.matches("[A-Z][a-z]{3}[0-9]{2}", id)) {
       return true;
@@ -94,6 +107,11 @@ public class EmployeeInfo {
     return false;
   }
 
+  /**
+   * Reverses the id if its valid, otherwise sets id to None01.
+   * @param id deptId is reversed
+   * @return reversed version of deptId
+   */
   public String reverseString(String id) {
     if (deptId.equals("None01")) {
       return deptId;

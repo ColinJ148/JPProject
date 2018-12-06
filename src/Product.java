@@ -18,15 +18,9 @@ class Product implements Item, Comparable<Product> {
     manufacturer = Item.manufacturer;
     currentProductionNumber++;
   }
-  static Product printType(Product product){
-    //need to figure this out
-    return null;
-  }
   /**
    * Overrides toString method to format the output of the fields within the class.
    */
-
-  //Overrides toString method to format the output of the fields within the class.
   @Override
   public String toString() {
     String output = "Manufacturer : " + manufacturer + "\n";

@@ -1,8 +1,6 @@
 /**
- * Class AudioPlayer extends product and implements multimediaControl
- * to allow a AudioPlayer object to be created while
- * still having product information and having all
- * multimediacontrol methods.
+ * Class AudioPlayer extends product and implements multimediaControl to allow a AudioPlayer object
+ * to be created while still having product information and having all multimediacontrol methods.
  */
 public class AudioPlayer extends Product implements MultimediaControl {
 
@@ -15,9 +13,8 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
-   *  * toString method to return a formatted string of information
-   * on the AudioPlayer which includes the Audio
-   * Specification and Audio type as well as everything from product.
+   * * toString method to return a formatted string of information on the AudioPlayer which includes
+   * the Audio Specification and Audio type as well as everything from product.
    */
 
   public String toString() {
@@ -29,30 +26,26 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
-   * The 4 methods below are implemented from MultimediaControl
-   * and are used to control the AudioPlayer.
+   * The 4 methods below are implemented from MultimediaControl and are used to control the
+   * AudioPlayer.
    */
   @Override
   public void play() {
     System.out.println("playing");
-
   }
 
   @Override
   public void stop() {
     System.out.println("stop");
-
   }
 
   @Override
   public void previous() {
     System.out.println("previous");
-
   }
 
   @Override
   public void next() {
     System.out.println("next");
-
   }
 }
